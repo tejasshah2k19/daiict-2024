@@ -1,0 +1,132 @@
+
+
+HL : eng 
+
+LL  : binary 0101
+
+
+ML : eng + binary 
+
+
+
+
+storage class :-> 
+4
+
+1) register : memory 
+2) auto : local 
+3) extern : global 
+4) static : int a = 10 ; 
+ 
+
+int a;
+pf(a);
+
+
+
+
+int a;// 4 byte -> RAM -> {stack,heap}
+
+
+
+
+
+
+
+#include<stdio.h> 
+
+void main(){
+    int a;
+    printf("%d",a);//g.v 
+
+}
+
+
+
+------------------------------------------------------------
+
+
+HL	: USER  
+
+LL	: SYSTEM
+
+ML
+
+
+Program -> HL --> run --> system --> LL 
+
+Program -> HL --> translator --> {system code: LL } run --> system --> output  
+
+Monday.c 
+?
+
+sunday.c 
+#include<stdio.h>
+
+extern int k;//global 
+
+
+void add(){
+	static int abc; //4byte 
+	extern int k;//global 
+
+}
+
+int main(){
+	int u; //local 
+	add();//allocation //abc:5000 
+	XXX
+	XXX 
+
+	add();//allocation? 
+
+
+
+	add();
+	return 0;
+}//release 
+
+
+//memory --> 
+//storage class -> 
+AUTO 
+EXTERN 
+STATIC 
+REGISTER 
+----------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
