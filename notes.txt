@@ -117,6 +117,13 @@ GCC -> 4 byte -> 32bit -> 2^32
 ---------------------------------------------------------------------------------
 
 
+Declarations and Initializations
+Control Instructions
+Expressions
+Floating Point Issues
+Functions
+library-functions
+
 
 
 
