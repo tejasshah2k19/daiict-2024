@@ -123,23 +123,105 @@ Expressions
 Floating Point Issues
 Functions
 library-functions
+----------------------------------------------------------
+
+												
+												
+												
+												
+												
+	*x	2006	2010	2011								
+	**q	2006	2008	2009								
+	*p	2000	2006	2007		int a;	2 byte 					
+	c		2004	2005								
+	b	30	2002	2003		int b;						
+	a	20	2000	2001								
+		stack 				int c;						
+												
+												
+						int *p;						
+						int **q;	store the address of another pointer					
+						int *x;	store address of variable 					
+						a = 20						
+						b = 30						
+												
+						p = address of a ? 		&	address of 			
+								*	value at			
+						p = &a;						
+						x = &p;						
+						q = &p;						
+												
+												
+		printf	q	2006		printf	a	20				
+		printf	&q	2008		printf	b	30				
+		printf	*q	2000		printf	p	2000	%d	%u		
+		printf	**q	20		printf	&a	2000				
+						printf	&p	2006				
+						printf	*p	20		*p	value at p	value at 2000
+												
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+int a; // a -> 2 byte -> stack -> implicit 
+DMA 
+memory allocate ---> calloc() malloc() 
+free -- release ---> free()
+
+ int a;// 2 byte 
+  int x[5]; // 2,5 
+
+int *p = malloc(2); 
+int *p = malloc(sizeof(int)); 
+int *p = (int*)malloc(sizeof(int)); 
+
+int *p = calloc(5,2); //5 no of element ,2 size of memory 
+int *p = calloc(5,sizeof(int)); //5 no of element ,2 size of memory 
+
+free(p); 
+
+-------------------------------------------------------------------------------------------------------------------------
+
+int a [] = { 12,34,55,66,77};
+int *p; 
+
+p = &a; 
+
+printf("%u ",p); //address of a
+printf("%u ",*p); //12 
+
+p++;
+p++; 
+
+printf("%u ",p); //address of a[2] 
+printf("%u ",*p); // 55 
 
 
 
+-------------------------------------------------------------------------------------------------------------------------
+
+int a [] = { 12,34,55,66,77};
+int *p; 
+
+p = &a; 
+
+printf("%d",*(p+1)); //p++ -> value -> 34 
+
+printf("%d",*(p+3)); //p++ p++ p++ -> value -> 66 
 
 
+-------------------------------------------------------------------------------------------------------------------------
 
 
+   static char *s[] = {"black", "white", "pink", "violet"};
+   char **ptr[] = {s+3, s+2, s+1, s}, ***p;
+   p = ptr;
+
+   printf *p -> violet 
+   printf *p+2 -> white 
 
 
-
-
-
-
-
-
-
-
+  
 
 
 
